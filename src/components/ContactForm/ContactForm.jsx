@@ -11,7 +11,7 @@ const validationSchema = Yup.object().shape({
     .matches(/^[A-Z][a-zA-Z\s]*$/, "The name must start with a capital letter!")
     .required("Required"),
   number: Yup.string()
-    .matches(/^\d{3}-\d{2}-\d{2}$/, "Invalid phone format (e.g. 123-45-67)")
+    .matches(/^\+\d{10,14}$/, "Format should be like +380971234567")
     .required("Required"),
 });
 
